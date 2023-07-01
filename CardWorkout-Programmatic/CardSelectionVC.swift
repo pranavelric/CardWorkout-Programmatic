@@ -4,15 +4,14 @@
 //
 //  Created by Pranav Choudhary on 01/07/23.
 //
-
 import UIKit
 
 class CardSelectionVC: UIViewController {
 
     let cardImageView = UIImageView()
-    let stopButton    = CWButton(backgroundColor: .red,title: "Stop")
-    let restartButton = CWButton(backgroundColor: .green,title: "Restart")
-    let rulesButton   = CWButton(backgroundColor: .blue,title: "Rules")
+    let stopButton    = CWButton(backgroundColor: .red,title: "Stop", systemImageName: "stop.circle")
+    let restartButton = CWButton(backgroundColor: .green,title: "Restart", systemImageName: "arrow.clockwise.circle")
+    let rulesButton   = CWButton(backgroundColor: .blue,title: "Rules", systemImageName: "list.bullet")
     let allCards      = Card.allValues
     var timer:Timer!
     
@@ -24,10 +23,12 @@ class CardSelectionVC: UIViewController {
         
     }
     
+    // Set up a timer to periodically call the `showRandomImage` method
     func startTimer(){
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,selector: #selector(showRandomImage),userInfo: nil,repeats: true)
     }
     
+    // Display a random card image in the cardImageView
     @objc func showRandomImage(){
         cardImageView.image = allCards.randomElement() ?? UIImage(named: "AS")
     }
