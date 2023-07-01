@@ -14,12 +14,22 @@ class CardSelectionVC: UIViewController {
     let restartButton = CWButton(backgroundColor: .green,title: "Restart")
     let rulesButton   = CWButton(backgroundColor: .blue,title: "Rules")
     let allCards      = Card.allValues
-
+    var timer:Timer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        startTimer()
         
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,selector: #selector(showRandomImage),userInfo: nil,repeats: true)
+    }
+    
+    @objc func showRandomImage(){
+        cardImageView.image = allCards.randomElement() ?? UIImage(named: "AS")
     }
     
     
@@ -28,6 +38,7 @@ class CardSelectionVC: UIViewController {
         configureStopButton()
         configureRestartButton()
         configureRulesButton()
+        
     }
     
     func configureCardImageView(){
@@ -52,6 +63,8 @@ class CardSelectionVC: UIViewController {
             stopButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stopButton.topAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: 30)
         ])
+        
+        stopButton.addTarget(self, action: #selector(stopButtonTapped), for: .touchUpInside)
     }
     
     func configureRestartButton(){
@@ -63,6 +76,8 @@ class CardSelectionVC: UIViewController {
             restartButton.leadingAnchor.constraint(equalTo: stopButton.leadingAnchor),
             restartButton.topAnchor.constraint(equalTo: stopButton.bottomAnchor, constant: 30)
         ])
+        
+        restartButton.addTarget(self, action: #selector(restartButtonTapped), for: .touchUpInside)
         
     }
     
@@ -81,6 +96,14 @@ class CardSelectionVC: UIViewController {
         present(RulesVC(), animated: true)
     }
     
+    @objc func stopButtonTapped(){
+        timer.invalidate()
+    }
+    
+    @objc func restartButtonTapped(){
+        timer.invalidate()
+        startTimer()
+    }
     
     
     
