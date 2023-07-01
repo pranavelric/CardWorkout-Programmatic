@@ -14,6 +14,7 @@
 		1E05428D2A502EEF00D4109F /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E05428C2A502EEF00D4109F /* CardSelectionVC.swift */; };
 		1E05428F2A50450B00D4109F /* CWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E05428E2A50450B00D4109F /* CWButton.swift */; };
 		1E0542912A504A3C00D4109F /* cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0542902A504A3C00D4109F /* cards.swift */; };
+		1E0542932A504E2900D4109F /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0542922A504E2900D4109F /* RulesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1E05428C2A502EEF00D4109F /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
 		1E05428E2A50450B00D4109F /* CWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWButton.swift; sourceTree = "<group>"; };
 		1E0542902A504A3C00D4109F /* cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cards.swift; sourceTree = "<group>"; };
+		1E0542922A504E2900D4109F /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				1E0542832A50293F00D4109F /* LaunchScreen.storyboard */,
 				1E0542862A50293F00D4109F /* Info.plist */,
 				1E05428C2A502EEF00D4109F /* CardSelectionVC.swift */,
+				1E0542922A504E2900D4109F /* RulesVC.swift */,
 				1E0542902A504A3C00D4109F /* cards.swift */,
 				1E05428E2A50450B00D4109F /* CWButton.swift */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				1E0542792A50293E00D4109F /* AppDelegate.swift in Sources */,
 				1E05427B2A50293E00D4109F /* SceneDelegate.swift in Sources */,
+				1E0542932A504E2900D4109F /* RulesVC.swift in Sources */,
 				1E05428D2A502EEF00D4109F /* CardSelectionVC.swift in Sources */,
 				1E05428F2A50450B00D4109F /* CWButton.swift in Sources */,
 				1E0542912A504A3C00D4109F /* cards.swift in Sources */,
